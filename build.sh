@@ -1,0 +1,1 @@
+cat templates/websitetop.html content/websitecontent.html content/websitebody.html templates/websitebottom.html > docs/combinedwebsite.html
