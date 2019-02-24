@@ -1,22 +1,9 @@
-def main ():
-    top_html = open('templates/websitetop.html').read()
-
-    content_html = open('content/websitecontent.html').read()
-
-    bottom_html = open('templates/websitebottom.html').read()
-
-
-    combined_html = top_html + content_html + bottom_html
-
-    open('output_file.html', 'w+').write(combined_html)
-
-if __name__ == '__main__'
-    main()
-
 def main():
-    template = open("base.html").read()
+    template = open('kickstart/personalwebsite/personalwebsite/templates/base.html').read()
 
+    index_content = open('docs/index.html').read()
 
-if __name__ == '__main__'
-    main()
+    finished_index_page = template.replace ('{{content}}', index_content) 
+    open('docs/index.html', 'w+').write(finished_index_page)
 
+main()
